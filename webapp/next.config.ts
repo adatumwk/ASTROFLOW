@@ -11,7 +11,6 @@ const nextConfig: NextConfig = {
 
     // GitHub Pages Base Path (REPO NAME)
     basePath: process.env.NODE_ENV === 'production' ? '/ASTROFLOW' : '',
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/ASTROFLOW/' : '',
 };
 
 export default nextConfig;
