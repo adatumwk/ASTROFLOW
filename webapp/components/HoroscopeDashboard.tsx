@@ -44,7 +44,7 @@ const SWIPE_HINT: Record<string, string> = {
 };
 
 export default function HoroscopeDashboard({ horoscopes, lang = 'en' }: { horoscopes: any[]; lang?: string }) {
-    const [selectedSignId, setSelectedSignId] = useState<number | null>(null);
+    const [selectedSignId, setSelectedSignId] = useState<number | null>(3); // Default to Aries (3)
 
     const activeHoroscope = selectedSignId
         ? horoscopes.find(h => h.sign_id === selectedSignId)
