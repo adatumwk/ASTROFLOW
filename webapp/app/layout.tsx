@@ -45,10 +45,10 @@ export const metadata: Metadata = {
         siteName: 'AstroFlow',
         images: [
             {
-                url: '/icon.png', // Fallback to icon for now, ideally a banner
-                width: 512,
-                height: 512,
-                alt: 'AstroFlow Logo',
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'AstroFlow Cosmic Guide',
             },
         ],
     },
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'AstroFlow - Your Daily Cosmic Guide',
         description: 'Discover what the stars have in store for you today.',
-        images: ['/icon.png'], // Fallback
+        images: ['/og-image.png'],
     },
     icons: {
         icon: '/icon.png',
