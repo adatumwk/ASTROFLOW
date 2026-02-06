@@ -1,0 +1,47 @@
+{
+  "en": {
+    "title": "Venusian Bloom",
+    "description": "February 7th, 2026, is bathed in Venusian energy, encouraging connection, beauty, and harmonious interactions. Focus on self-care, creative pursuits, and nurturing relationships; diplomacy will be key to navigating any minor conflicts. Allow yourself to indulge in pleasures, but maintain balance.",
+    "planet": "Venus",
+    "element": "Water",
+    "color": "Rose Pink",
+    "intensity": 3,
+    "date": "2026-02-07"
+  },
+  "ru": {
+    "title": "Творческий Прорыв",
+    "description": "День благоприятен для самовыражения и реализации творческих идей. Энергия вдохновляет на новые начинания, но требует концентрации и веры в себя. Используйте этот импульс для воплощения своих мечтаний.",
+    "planet": "Венера",
+    "element": "Огонь",
+    "color": "Розовый",
+    "intensity": 4,
+    "date": "2026-02-07"
+  },
+  "de": {
+    "title": "Harmonische Verbindung",
+    "description": "Der 7. Februar 2026 steht unter dem Zeichen einer sanften, verbindenden Energie. Venus und Jupiter bilden einen günstigen Aspekt, der Kreativität und soziale Harmonie fördert. Es ist ein guter Tag für Beziehungen, Kunst und Genuss.",
+    "planet": "Venus",
+    "element": "Wasser",
+    "color": "Grün",
+    "intensity": 3,
+    "date": "2026-02-07"
+  },
+  "fr": {
+    "title": "Harmonie Aquarienne",
+    "description": "Une journée propice à l'innovation, à la connexion sociale et à l'expression de l'individualité. L'énergie est stimulante et encourage à sortir des sentiers battus, tout en favorisant un sentiment de communauté et de partage.",
+    "planet": "Uranus",
+    "element": "Air",
+    "color": "Bleu électrique",
+    "intensity": 4,
+    "date": "2026-02-07"
+  },
+  "es": {
+    "title": "Conexión Intuitiva",
+    "description": "La energía del día favorece la introspección y la conexión con tu intuición. Es un buen momento para la meditación, el arte y la exploración de tus emociones más profundas. Presta atención a tus sueños y a las señales sutiles del universo.",
+    "planet": "Neptuno",
+    "element": "Agua",
+    "color": "Lila",
+    "intensity": 3,
+    "date": "2026-02-07"
+  }
+}
