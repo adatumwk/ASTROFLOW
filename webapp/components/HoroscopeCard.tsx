@@ -87,7 +87,7 @@ export default function HoroscopeCard({ data, lang = 'en' }: HoroscopeProps) {
                         <div className={`text-4xl drop-shadow-lg ${signData.color}`}>{signData.emoji}</div>
                         <div>
                             <h2 className="text-xl font-bold text-white uppercase tracking-wide">{signName}</h2>
-                            <span className="text-[10px] text-zinc-500 font-mono tracking-widest">{new Date(data.date).toLocaleDateString()}</span>
+                            <span className="text-[10px] text-zinc-500 font-mono tracking-widest">{new Date(data.date).toLocaleDateString(lang)}</span>
                         </div>
                     </div>
                 </div>
