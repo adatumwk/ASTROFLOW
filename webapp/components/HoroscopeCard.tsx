@@ -106,18 +106,7 @@ export default function HoroscopeCard({ data, lang = 'en' }: HoroscopeProps) {
                     transition={{ duration: 0.3 }}
                 >
                     <div className="grid grid-cols-1 gap-3 mb-4">
-                        <div className="bg-white/5 rounded-2xl p-4 border border-white/5 flex flex-col justify-start gap-2 h-full">
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-1.5 text-pink-300 text-xs font-bold uppercase tracking-wider">
-                                    <Heart className="w-3.5 h-3.5" /> {labels.love}
-                                </div>
-                                <RatingStars rating={data.love_rating || 0} colorClass="text-pink-500" />
-                            </div>
-                            <div className="w-full h-px bg-white/5" />
-                            <p className="text-xs text-zinc-300 leading-relaxed font-medium">
-                                {data.love_text?.trim()}
-                            </p>
-                        </div>
+
 
                         <div className="bg-white/5 rounded-2xl p-4 border border-white/5 flex flex-col justify-start gap-2 h-full">
                             <div className="flex items-center gap-1.5 text-pink-300 text-xs font-bold uppercase tracking-wider mb-2">
