@@ -120,11 +120,18 @@ export default function HoroscopeCard({ data, lang = 'en' }: HoroscopeProps) {
                         </div>
 
                         <div className="bg-white/5 rounded-2xl p-4 border border-white/5 flex flex-col justify-start gap-2 h-full">
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-1.5 text-blue-300 text-xs font-bold uppercase tracking-wider">
-                                    <Briefcase className="w-3.5 h-3.5" /> {labels.business}
-                                </div>
-                                <RatingStars rating={data.business_rating || 0} colorClass="text-blue-500" />
+                            <div className="flex items-center gap-1.5 text-pink-300 text-xs font-bold uppercase tracking-wider mb-2">
+                                <Heart className="w-3.5 h-3.5" /> {labels.love}
+                            </div>
+                            <div className="w-full h-px bg-white/5" />
+                            <p className="text-xs text-zinc-300 leading-relaxed font-medium">
+                                {data.love_text?.trim()}
+                            </p>
+                        </div>
+
+                        <div className="bg-white/5 rounded-2xl p-4 border border-white/5 flex flex-col justify-start gap-2 h-full">
+                            <div className="flex items-center gap-1.5 text-blue-300 text-xs font-bold uppercase tracking-wider mb-2">
+                                <Briefcase className="w-3.5 h-3.5" /> {labels.business}
                             </div>
                             <div className="w-full h-px bg-white/5" />
                             <p className="text-xs text-zinc-300 leading-relaxed font-medium">
