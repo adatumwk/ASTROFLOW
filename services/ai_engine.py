@@ -2,7 +2,7 @@ import asyncio
 import logging
 import google.genai as genai
 from google.genai import types
-from config import GOOGLE_API_KEY, CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN
+from config import GOOGLE_API_KEY
 
 from typing import Tuple
 import threading
