@@ -1,0 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+.env
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Next.js (already in webapp/.gitignore usually, but good to have)
+webapp/.next/
+webapp/out/
+webapp/node_modules/
