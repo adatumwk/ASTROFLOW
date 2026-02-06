@@ -16,15 +16,15 @@ Output ONLY valid JSON:
     "business_text": "Career & finance forecast",
     "health_text": "Health & vitality forecast",
     "lunar_text": "Lunar aspect/mood",
-    "lucky_numbers": [7, 12, 88], // 3 lucky numbers
-    "lucky_color": "Emerald Green", // Color of the day
-    "mood_word": "Patience", // One word mood
-    "love_rating": 5, // 1-5
-    "business_rating": 4, // 1-5
-    "health_rating": 3, // 1-5
-    "lunar_rating": 4 // 1-5
+    "lucky_numbers": [7, 12, 88], // Generate 3 RANDOM unique numbers (1-99)
+    "lucky_color": "Emerald Green", // A unique color for this sign today
+    "mood_word": "Patience", // A unique mood word
+    "love_rating": 5, // Random 1-5
+    "business_rating": 4, // Random 1-5
+    "health_rating": 3, // Random 1-5
+    "lunar_rating": 4 // Random 1-5
 }}
-Tone: Inspiring, helpful, objective. Avoid clichés.
+Tone: Inspiring, helpful, objective. Avoid clichés. Generate UNIQUE data for each sign.
 """,
     "ru": """
 Ты — профессиональный астролог. Составь гороскоп на день для:
@@ -38,15 +38,15 @@ Tone: Inspiring, helpful, objective. Avoid clichés.
     "business_text": "Карьера и финансы",
     "health_text": "Здоровье и энергия",
     "lunar_text": "Лунный аспект",
-    "lucky_numbers": [7, 12, 88], // 3 счастливых числа
-    "lucky_color": "Изумрудный", // Цвет дня
-    "mood_word": "Терпение", // Настроение одним словом
+    "lucky_numbers": [7, 12, 88], // Генерируй 3 СЛУЧАЙНЫХ числа (1-99)
+    "lucky_color": "Изумрудный", // Уникальный цвет
+    "mood_word": "Терпение", // Уникальное настроение
     "love_rating": 5, // 1-5
     "business_rating": 4, // 1-5
     "health_rating": 3, // 1-5
     "lunar_rating": 4 // 1-5
 }}
-Тон: Вдохновляющий, полезный. Избегай клише.
+Тон: Вдохновляющий, полезный. Генерируй УНИКАЛЬНЫЕ данные для каждого знака.
 """,
     "de": """
 Sie sind ein professioneller Astrologe. Erstellen Sie ein Tageshoroskop für:
