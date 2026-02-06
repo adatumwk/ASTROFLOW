@@ -85,7 +85,10 @@ export default function MainContent({ initialHoroscopes, initialEnergy }: MainCo
 
     const todayLabel = TODAY_LABELS[lang] || TODAY_LABELS['en'];
     // Capitalize first letter of the month/date if needed (some locales like ru might need it, though standard format is usually fine)
-    const formattedDate = new Date().toLocaleDateString(lang, { day: 'numeric', month: 'long', year: 'numeric' });
+    // Use the date from the data (Energy widget) if available, so it matches the content.
+    // Fallback to current date if data is missing.
+    const displayDate = energy?.date ? new Date(energy.date) : new Date();
+    const formattedDate = displayDate.toLocaleDateString(lang, { day: 'numeric', month: 'long', year: 'numeric' });
 
     if (!mounted) return null; // Prevent hydration mismatch
 
