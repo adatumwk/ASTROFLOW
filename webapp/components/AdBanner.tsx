@@ -22,8 +22,9 @@ export default function AdBanner({ className, slotId }: AdBannerProps) {
     */
 
     return (
-        <div className={`hidden ${className}`} aria-hidden="true">
-            {/* Placeholder for Ad Unit {slotId} */}
+        <div className={`w-full max-w-5xl mx-auto h-[100px] bg-white/5 border border-white/5 rounded-2xl flex flex-col items-center justify-center text-zinc-600 space-y-2 overflow-hidden ${className}`}>
+            <p className="text-xs font-mono uppercase tracking-widest">Реклама</p>
+            <p className="text-[10px] opacity-50">{slotId || 'Google AdSense'}</p>
         </div>
     );
 }

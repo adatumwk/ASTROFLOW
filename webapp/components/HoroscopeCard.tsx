@@ -4,19 +4,27 @@ import React from 'react';
 import { Star, Heart, Briefcase, Moon, Sparkles, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const SIGNS: Record<number, { name: string; emoji: string; color: string }> = {
-    1: { name: 'Лев', emoji: '♌', color: 'text-orange-500' },
-    2: { name: 'Дева', emoji: '♍', color: 'text-emerald-500' },
-    3: { name: 'Овен', emoji: '♈', color: 'text-red-500' },
-    4: { name: 'Скорпион', emoji: '♏', color: 'text-red-700' },
-    5: { name: 'Телец', emoji: '♉', color: 'text-green-600' },
-    6: { name: 'Весы', emoji: '♎', color: 'text-indigo-400' },
-    7: { name: 'Близнецы', emoji: '♊', color: 'text-yellow-400' },
-    8: { name: 'Рак', emoji: '♋', color: 'text-pink-400' },
-    9: { name: 'Козерог', emoji: '♑', color: 'text-stone-400' },
-    10: { name: 'Водолей', emoji: '♒', color: 'text-cyan-400' },
-    11: { name: 'Рыбы', emoji: '♓', color: 'text-cyan-600' },
-    12: { name: 'Стрелец', emoji: '♐', color: 'text-purple-500' }
+const ZODIAC_NAMES: Record<string, Record<number, string>> = {
+    ru: { 1: 'Лев', 2: 'Дева', 3: 'Овен', 4: 'Скорпион', 5: 'Телец', 6: 'Весы', 7: 'Близнецы', 8: 'Рак', 9: 'Козерог', 10: 'Водолей', 11: 'Рыбы', 12: 'Стрелец' },
+    en: { 1: 'Leo', 2: 'Virgo', 3: 'Aries', 4: 'Scorpio', 5: 'Taurus', 6: 'Libra', 7: 'Gemini', 8: 'Cancer', 9: 'Capricorn', 10: 'Aquarius', 11: 'Pisces', 12: 'Sagittarius' },
+    de: { 1: 'Löwe', 2: 'Jungfrau', 3: 'Widder', 4: 'Skorpion', 5: 'Stier', 6: 'Waage', 7: 'Zwillinge', 8: 'Krebs', 9: 'Steinbock', 10: 'Wassermann', 11: 'Fische', 12: 'Schütze' },
+    fr: { 1: 'Lion', 2: 'Vierge', 3: 'Bélier', 4: 'Scorpion', 5: 'Taureau', 6: 'Balance', 7: 'Gémeaux', 8: 'Cancer', 9: 'Capricorne', 10: 'Verseau', 11: 'Poissons', 12: 'Sagittaire' },
+    es: { 1: 'Leo', 2: 'Virgo', 3: 'Aries', 4: 'Escorpio', 5: 'Tauro', 6: 'Libra', 7: 'Géminis', 8: 'Cáncer', 9: 'Capricornio', 10: 'Acuario', 11: 'Piscis', 12: 'Sagitario' },
+};
+
+const SIGNS_DATA: Record<number, { emoji: string; color: string }> = {
+    1: { emoji: '♌', color: 'text-orange-500' },
+    2: { emoji: '♍', color: 'text-emerald-500' },
+    3: { emoji: '♈', color: 'text-red-500' },
+    4: { emoji: '♏', color: 'text-red-700' },
+    5: { emoji: '♉', color: 'text-green-600' },
+    6: { emoji: '♎', color: 'text-indigo-400' },
+    7: { emoji: '♊', color: 'text-yellow-400' },
+    8: { emoji: '♋', color: 'text-pink-400' },
+    9: { emoji: '♑', color: 'text-stone-400' },
+    10: { emoji: '♒', color: 'text-cyan-400' },
+    11: { emoji: '♓', color: 'text-cyan-600' },
+    12: { emoji: '♐', color: 'text-purple-500' }
 };
 
 
@@ -56,7 +64,9 @@ const RatingStars = ({ rating, colorClass }: { rating: number, colorClass: strin
 }
 
 export default function HoroscopeCard({ data, lang = 'en' }: HoroscopeProps) {
-    const sign = SIGNS[data.sign_id] || { name: 'Знак', emoji: '⭐', color: 'text-gray-400' };
+    const signsNames = ZODIAC_NAMES[lang] || ZODIAC_NAMES['en'];
+    const signData = SIGNS_DATA[data.sign_id] || { emoji: '⭐', color: 'text-gray-400' };
+    const signName = signsNames[data.sign_id] || 'Sign';
     const labels = LABELS[lang] || LABELS['en'];
     const ctaText = CTA_BUTTON[lang] || CTA_BUTTON['en'];
 
@@ -74,9 +84,9 @@ export default function HoroscopeCard({ data, lang = 'en' }: HoroscopeProps) {
                 {/* Header */}
                 <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                        <div className={`text-4xl drop-shadow-lg ${sign.color}`}>{sign.emoji}</div>
+                        <div className={`text-4xl drop-shadow-lg ${signData.color}`}>{signData.emoji}</div>
                         <div>
-                            <h2 className="text-xl font-bold text-white uppercase tracking-wide">{sign.name}</h2>
+                            <h2 className="text-xl font-bold text-white uppercase tracking-wide">{signName}</h2>
                             <span className="text-[10px] text-zinc-500 font-mono tracking-widest">{new Date(data.date).toLocaleDateString()}</span>
                         </div>
                     </div>
@@ -95,7 +105,7 @@ export default function HoroscopeCard({ data, lang = 'en' }: HoroscopeProps) {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
                 >
-                    <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="grid grid-cols-1 gap-3 mb-4">
                         <div className="bg-white/5 rounded-2xl p-4 border border-white/5 flex flex-col justify-start gap-2 h-full">
                             <div className="flex items-center justify-between">
                                 <div className="flex items-center gap-1.5 text-pink-300 text-xs font-bold uppercase tracking-wider">

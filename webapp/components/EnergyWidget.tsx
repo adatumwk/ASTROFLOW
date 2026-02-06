@@ -22,7 +22,7 @@ export default function EnergyWidget({ data }: EnergyProps) {
         <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="w-full max-w-4xl mx-auto mb-16 relative group"
+            className="w-full max-w-5xl mx-auto mb-16 relative group"
         >
             <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-purple-500/10 blur-xl opacity-50 rounded-3xl" />
 

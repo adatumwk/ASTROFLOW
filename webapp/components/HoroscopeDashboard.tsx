@@ -61,8 +61,8 @@ export default function HoroscopeDashboard({ horoscopes, lang = 'en' }: { horosc
     return (
         <div className="w-full max-w-5xl mx-auto space-y-8 md:space-y-12">
             {/* Swipe Hint (Mobile Only) */}
-            <div className="md:hidden text-center -mb-4 animate-pulse">
-                <p className="text-xs text-zinc-500 font-mono tracking-widest uppercase">{swipeHint}</p>
+            <div className="md:hidden text-center mb-2 animate-pulse">
+                <p className="text-xs text-white/50 font-mono tracking-widest uppercase">{swipeHint}</p>
             </div>
 
             {/* Navigation Menu - Responsive: Horizontal Scroll (Mobile) / 6x2 Grid (Desktop) */}
@@ -125,7 +125,7 @@ export default function HoroscopeDashboard({ horoscopes, lang = 'en' }: { horosc
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: -20 }}
                             transition={{ type: "spring", duration: 0.5 }}
-                            className="w-full max-w-md"
+                            className="w-full max-w-5xl"
                         >
                             <HoroscopeCard data={activeHoroscope} lang={lang} />
                         </motion.div>
