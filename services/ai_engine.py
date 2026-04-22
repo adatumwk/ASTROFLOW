@@ -10,6 +10,8 @@ import threading
 logger = logging.getLogger(__name__)
 
 CASCADE_SMART = [
+    "gemma-4-31b-it",
+    "gemma-4-26b-it",
     "gemma-3-27b-it",
     "gemma-3-12b-it", 
     "gemma-3-8b-it", # Correcting 8b if 4b is not standard, but adhering to user list if possible. User said 4b. Let's stick to user list exactly: 27, 12, 4, 2, 1.
